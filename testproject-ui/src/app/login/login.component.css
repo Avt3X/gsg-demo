@@ -1,0 +1,32 @@
+.center-div {
+  margin: 0 auto;
+  margin-top: 5rem;
+  background:darkred;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-space {
+  margin-left: 1rem;
+}
+
+#backgroundVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+h1.logInfo,label{
+  color: #fff;
+}
+
+.backgroundGif {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

@@ -1,0 +1,40 @@
+<div style="float: right">
+  <button class="btn btn-primary" (click)="onLogOut()">
+    LogOut
+  </button>
+</div>
+<section class="container">
+  <div class="row">
+    <div class="col-xs-6 center-div">
+      <h1 class="logInfo">Job info </h1>
+      <div class="form-group">
+        <label for="email">Country code:</label>
+        <input type="email" name="username" [(ngModel)]="countryCode" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Job execution time:</label>
+        <input type="text" name="password" [(ngModel)]="jobTime" class="form-control" id="pwd" required>
+      </div>
+      <div class="btn-toolbar">
+        <button class="btn btn-success" type="button" (click)="onUpdate()">Update</button>
+      </div>
+      <div *ngIf="message">{{message}}</div>
+      <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+      <h1 class="logInfo">Latest job result </h1>
+      <div *ngIf="result">
+        <div class="form-group">
+          Video: <a [href]="result.upVotedCommentLink">{{result.trendedVideoLink}}</a>
+        </div>
+        <div class="form-group">
+          Comment: <a [href]="result.upVotedCommentLink">{{result.upVotedCommentLink}}</a>
+        </div>
+        <div class="form-group">
+          <p>Time: {{result.createdAt}}</p>
+        </div>
+        <div *ngIf ="result.errorMessage" class="form-group">
+          <p>Error: {{result.errorMessage}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
