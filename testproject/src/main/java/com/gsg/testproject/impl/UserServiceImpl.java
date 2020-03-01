@@ -29,8 +29,6 @@ class UserServiceImpl implements UserService {
         var user = buildUser(userInput);
 
         userRepository.save(user);
-
-        jobService.scheduleJob(user.getUsername(), user.getCountry(), user.getJobExecutionTime());
     }
 
     @Override
@@ -60,6 +58,12 @@ class UserServiceImpl implements UserService {
     @Override
     public UserInput getUser(String username) {
         var user = userRepository.getUser(username);
+
+        /*
+          We should reschedule job because it's in memory
+         */
+        jobService.scheduleJob(username, user.getCountry(), user.getJobExecutionTime());
+
         return UserInput
                 .builder()
                 .country(user.getCountry())

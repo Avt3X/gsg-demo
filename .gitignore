@@ -77,4 +77,7 @@ build/
 ### VS Code ###
 .vscode/
 
-*.json
+testproject-ui/*.json
+testproject-ui/e2e/*.json
+testproject-ui/src/*.json
+testproject-ui/node_modules/

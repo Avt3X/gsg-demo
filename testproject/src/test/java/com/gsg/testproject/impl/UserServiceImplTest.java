@@ -61,12 +61,9 @@ public class UserServiceImplTest {
     @Test
     public void shouldRegisterUser() {
         doNothing().when(userRepository).save(user);
-        doNothing().when(jobService).scheduleJob(userInput.getUsername(), userInput.getCountry(), userInput.getJobExecutionTime());
-
         userService.register(userInput);
 
         verify(userRepository, times(1)).save(user);
-        verify(jobService, times(1)).scheduleJob(userInput.getUsername(), userInput.getCountry(), userInput.getJobExecutionTime());
     }
 
     @Test(expected = Exception.class)
@@ -107,6 +104,7 @@ public class UserServiceImplTest {
     @Test
     public void shouldGetUser() {
         doReturn(user).when(userRepository).getUser(userInput.getUsername());
+        doNothing().when(jobService).scheduleJob(userInput.getUsername(), userInput.getCountry(), userInput.getJobExecutionTime());
 
         var result = userService.getUser(userInput.getUsername());
 

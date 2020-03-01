@@ -1,0 +1,12 @@
+{
+  "username" : "test@gmail.com",
+  "password" : "test",
+  "country" : "GB",
+  "jobExecutionTime" : 1,
+  "youtubeResults" : [{
+    "trendedVideoLink" : "https://youtube.com/watch?v=0jz0GAFNNIo",
+    "upVotedCommentLink" : "https://youtube.com/watch?v=0jz0GAFNNIo&lc=UgykbtekGRmZEA5WuSp4AaABAg",
+    "createdAt" : "2020-03-01T17:42:24.965073",
+    "errorMessage" : null
+  } ]
+}

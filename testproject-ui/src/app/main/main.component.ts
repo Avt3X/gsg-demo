@@ -80,7 +80,7 @@ export class MainComponent implements OnInit {
     this.stomp = Stomp.over(sockJs);
     const thisObject = this;
     thisObject.stomp.connect({}, (frame) => {
-      thisObject.stomp.subscribe('/topic/job/result', (sdkEvent) => {
+      thisObject.stomp.subscribe('/topic/job/result/' + localStorage.getItem('username'), (sdkEvent) => {
         thisObject.onMessageReceived(sdkEvent);
       });
     }, this.errorCallBack);

@@ -63,7 +63,7 @@ class JobServiceImpl implements JobService {
 
                 log.info("Job executed for {}", user);
 
-                simpMessagingTemplate.convertAndSend(JOB_RESULT_TOPIC, result);
+                simpMessagingTemplate.convertAndSend(JOB_RESULT_TOPIC + "/" +username, result);
             } catch (Exception e) {
                 log.error(e);
             }

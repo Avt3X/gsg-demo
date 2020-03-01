@@ -1,27 +1,53 @@
-# TestprojectUi
+# GSG demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Demo Spring Boot & Angular 7 project
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Backend
+1) Java 11
+2) Spring Boot
+3) Maven
 
-## Code scaffolding
+### Frontend
+1) Typescript
+2) Angular 7
+3) Angular CLI
+4) NPM
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build & Run
 
-## Build
+Considering you have all requirements installed.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Backend
 
-## Running unit tests
+In order application to work you will need to provide `youtube api key`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Open your terminal:
 
-## Running end-to-end tests
+Navigate to `testproject` and run the following:        
+  1)   `mvn clean install`  (this will compile, build and test backend)
+  2)   `mvn spring-boot:run -Dspring-boot.run.arguments=--youtube.api.key=API_KEY` 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Note: remember to change `API_KEY` to your key.
 
-## Further help
+#### Running tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To run tests use this command:      
+`mvn clean test`
+
+### Frontend
+
+Navigate to `testproject-ui` and run the following:        
+  1)   `npm install`  (this will install all dependencies)
+  2)   `ng serve` 
+  
+## Play with it
+
+Open you browser and go to http://localhost:4200
+
+Test user credentials:      
+Username: `test@gmail.com`      
+Password: `test`
+
+Enjoy :)
