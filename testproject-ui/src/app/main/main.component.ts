@@ -62,7 +62,7 @@ export class MainComponent implements OnInit {
         this.result = result;
       }
     }, error1 => {
-      this.errorMessage = error1.message;
+      this.errorMessage = error1.error;
     });
   }
 
@@ -71,7 +71,7 @@ export class MainComponent implements OnInit {
       localStorage.clear();
       this.router.navigate(['/login']);
     }, error => {
-      this.error = error;
+      this.error = error.error;
     });
   }
 
@@ -107,7 +107,7 @@ export class MainComponent implements OnInit {
         if (status === 401) {
           localStorage.clear();
         }
-        this.errorMessage = error.message;
+        this.errorMessage = error.error;
       });
   }
 }

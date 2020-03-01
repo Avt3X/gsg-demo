@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/main']);
       },
       error1 => {
-        this.errorMessage = error1.message;
+        this.errorMessage = error1.error;
       });
   }
 

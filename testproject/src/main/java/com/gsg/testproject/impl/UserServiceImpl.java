@@ -99,7 +99,7 @@ class UserServiceImpl implements UserService {
     }
 
     private <T> T getOrThrow(T value) {
-        return Optional.ofNullable(value).orElseThrow(IllegalArgumentException::new);
+        return Optional.ofNullable(value).orElseThrow(() -> new IllegalArgumentException("All field is required"));
     }
 
     private <T> void setIfExists(Consumer<T> consumer, T value) {

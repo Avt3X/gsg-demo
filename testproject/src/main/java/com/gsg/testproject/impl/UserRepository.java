@@ -43,7 +43,7 @@ class UserRepository {
         try {
             var path = String.join(DELIMITER, user.getUsername(), EXTENSION);
             if (Files.exists(Paths.get(path))) {
-                throw new IllegalStateException("User already exists: " + user.getUsername());
+                throw new IllegalArgumentException("User already exists: " + user.getUsername());
             } else  {
                 Files.createFile(Paths.get(path));
             }

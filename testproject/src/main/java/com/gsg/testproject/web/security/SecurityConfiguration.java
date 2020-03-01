@@ -15,6 +15,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.List;
 
+/**
+ * Configuration class to manage authorisation, better to have JWT
+ */
 @Log4j2
 @EnableWebSecurity
 class SecurityConfiguration extends WebSecurityConfigurerAdapter {
