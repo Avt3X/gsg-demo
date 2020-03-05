@@ -77,7 +77,4 @@ build/
 ### VS Code ###
 .vscode/
 
-testproject-ui/package-lock.json
-testproject-ui/e2e/*.json
-testproject-ui/src/*.json
 testproject-ui/node_modules/
