@@ -77,10 +77,7 @@ build/
 ### VS Code ###
 .vscode/
 
-testproject-ui/tsconfig.json
-testproject-ui/tslint.json
 testproject-ui/package-lock.json
-testproject-ui/angular.json
 testproject-ui/e2e/*.json
 testproject-ui/src/*.json
 testproject-ui/node_modules/
