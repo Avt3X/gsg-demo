@@ -42,6 +42,11 @@ Navigate to `testproject-ui` and run the following:
   1)   `npm install`  (this will install all dependencies)
   2)   `ng serve` 
   
+#### Running tests
+
+To run tests use this command:      
+`npm run test-headless`
+  
 ## Play with it
 
 Open you browser and go to http://localhost:4200

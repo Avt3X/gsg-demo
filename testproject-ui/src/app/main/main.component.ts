@@ -31,6 +31,10 @@ export class MainComponent implements OnInit {
   }
 
   onUpdate() {
+    if (this.jobTime < 1 || this.jobTime > 59) {
+      this.message = 'Job time must be between 1 and 60';
+      return;
+    }
     const user = new User();
     user.jobExecutionTime = this.jobTime;
     user.country = this.countryCode;

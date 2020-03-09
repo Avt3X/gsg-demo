@@ -1,5 +1,5 @@
 <div style="float: right">
-  <button class="btn btn-primary" (click)="onLogOut()">
+  <button id="logout" class="btn btn-primary" (click)="onLogOut()">
     LogOut
   </button>
 </div>
@@ -22,17 +22,17 @@
       <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
       <h1 class="logInfo">Latest job result </h1>
       <div *ngIf="result">
-        <div class="form-group">
+        <div class="form-group" id="video">
           Video: <a [href]="result.upVotedCommentLink">{{result.trendedVideoLink}}</a>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="comment">
           Comment: <a [href]="result.upVotedCommentLink">{{result.upVotedCommentLink}}</a>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="date">
           <p>Time: {{result.createdAt}}</p>
         </div>
-        <div *ngIf ="result.errorMessage" class="form-group">
-          <p>Error: {{result.errorMessage}}</p>
+        <div *ngIf ="result.errorMessage" class="form-group" id="error">
+          <p id="errText">Error: {{result.errorMessage}}</p>
         </div>
       </div>
     </div>
